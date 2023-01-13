@@ -5,10 +5,10 @@
 body{
     font-family: 'Poppins', sans-serif;
     background-color: #F3F1FF;
-    /* margin: 0px;
-    padding: 0px; */
+    margin: 0px;
+    padding: 0px;
 }
-/* header{
+header{
     width: 100%;
     background-color: #562EFF;
     color: white;
@@ -16,7 +16,7 @@ body{
 nav{
     display: flex;
     justify-content: space-around;
-} */
+}
 main{
     display: flex;
     flex-direction: column;
@@ -36,6 +36,36 @@ hr{
     margin-bottom: 27px;
 }
 /* header navigation styles */
+.logo-section{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.logo-section .logo-img{
+    width: 40px;
+    height: 50px;
+}
+.logo-title{
+    font-size: 24px;
+}
+.menu-bar ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.menu-bar ul li{
+    padding-left: 36px;
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+}
+.menu-bar ul li img{
+    height: 50px;
+    width: 50px;
+}
 /* top players style */
 .section-title{
     color: #562EFF;
@@ -146,6 +176,16 @@ hr{
 /* media queries */
 /* mobile devices */
 @media only screen and (max-width:688px){
+    nav, .menu-bar ul{
+        flex-direction: column;
+    }
+    .menu-bar ul{
+        padding-left: 0px;
+        margin-top: 0px;
+    }
+    .menu-bar ul li{
+        padding: 8px;
+    }
     .container{
         width: 100%;
     }
@@ -166,6 +206,12 @@ hr{
 }
 /* tablet devices */
 @media only screen and (min-width:689px) and (max-width:992px) {
+    .menu-bar ul{
+        flex-direction: column-reverse;
+    }
+    .menu-bar ul li{
+        padding-bottom: 8px;
+    }
     .container{
         width: 100%;
     }
